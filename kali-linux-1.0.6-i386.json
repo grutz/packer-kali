@@ -1,20 +1,19 @@
 {
   "variables": {
-    "vm_name": "kali-linux-1.0.6-amd64",
+    "vm_name": "kali-linux-1.0.6-i386",
     "disk_size": 20480,
-    "iso_checksum": "281ddb3d14619a973e254b8f484b7fe27defa822",
+    "iso_checksum": "518aad75c2c5f1c60b2068760712f7e82c02d703",
     "iso_checksum_type": "sha1",
-    "iso_url": "http://cdimage.kali.org/kali-1.0.6/kali-linux-1.0.6-amd64.iso",
-    "box_name" : "kali-linux-1.0.6-amd64.box", 
-    "box_desc" : "Kali Linux 1.0.6 64 Bit"
+    "iso_url": "http://cdimage.kali.org/kali-1.0.6/kali-linux-1.0.6-i386.iso",
+    "box_name" : "kali-linux-1.0.6-i386.box", 
+    "box_desc" : "Kali Linux 1.0.6 32 Bit"
   },
   "description": "{{user `box_desc`}}",
   "builders": [
     {
-      "headless": true,
       "type": "virtualbox-iso",
       "virtualbox_version_file": ".vbox_version",
-      "guest_os_type": "Debian_64",
+      "guest_os_type": "Debian",
       "vm_name": "{{user `vm_name`}}",
       "iso_url": "{{user `iso_url`}}",
       "iso_checksum": "{{user `iso_checksum`}}",
