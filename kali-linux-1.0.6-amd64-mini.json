@@ -11,7 +11,7 @@
   "description": "{{user `box_desc`}}",
   "builders": [
     {
-      "headless": true,
+      "headless": false,
       "type": "virtualbox-iso",
       "virtualbox_version_file": ".vbox_version",
       "guest_os_type": "Debian_64",
@@ -88,7 +88,7 @@
            [ "-m", "512m" ],
            [ "--no-acpi", "" ]
       ]
-    }
+    }, 
   ],
   "provisioners": [
     {
@@ -113,8 +113,10 @@
   ],
   "post-processors": [  {
     "type": "vagrant",
+    "keep_input_artifact": true,
     "output" : "{{user `box_name`}}",
     "only": ["virtualbox-iso"]
+
   }
   ]
 }
