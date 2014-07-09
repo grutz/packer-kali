@@ -1,12 +1,12 @@
 {
   "variables": {
-    "vm_name": "kali-linux-1.0.6-amd64-mini",
+    "vm_name": "kali-mini",
     "disk_size": 20480,
-    "iso_checksum": "d859cc2798a24c48ddd37c6aafd88c5dc5e6e123",
+    "iso_checksum": "fe0fab66c49325c295a116cefd00ca94993efee0",
     "iso_checksum_type": "sha1",
-    "iso_url": "http://cdimage.kali.org/kali-1.0.6/kali-linux-1.0.6-amd64-mini.iso",
-    "box_name" : "kali-linux-1.0.6-amd64-mini.box", 
-    "box_desc" : "Kali Linux 1.0.6 64 Bit Mini"
+    "iso_url": "http://cdimage.kali.org/kali-1.0.7/kali-linux-1.0.7-amd64-mini.iso",
+    "box_name" : "kali-linux-1.0.7-amd64-mini.box", 
+    "box_desc" : "Kali Linux 1.0.7 64 Bit Mini"
   },
   "description": "{{user `box_desc`}}",
   "builders": [
@@ -88,7 +88,7 @@
            [ "-m", "512m" ],
            [ "--no-acpi", "" ]
       ]
-    }, 
+    } 
   ],
   "provisioners": [
     {
